@@ -1,0 +1,176 @@
+:root{
+    --font-color1: #f3f3f3;
+    --font-color2: #101010;
+    
+    --main-color: #b30000;
+    --second-color: #7d0000;
+    --third-color: #ffbfbf;
+    --fourth-color: #ff8080;
+    --fifth-color: #ffc2c2;
+
+
+    --sixth-color: #f3f3f3;
+    --seventh-color: #f3f3f3;
+    --eighth-color: #f3f3f3;
+    --ninth-color: #f3f3f3;
+    --tenth-color: #f3f3f3;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition-duration: 0.25s;
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr{
+    width: 35%;
+    background: var(--main-color);
+    height: 3px;
+    border-top: none ;
+    opacity: 1 ;
+}
+
+#app>p, #blogIndex>p{
+    text-align: center;
+    margin: 5% 0%;
+}
+
+.margin1{
+    margin-bottom: 5%;
+}
+
+.divFlex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gap1{
+    gap: 2%;
+}
+
+.list1, .list3, .games_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.games_list{
+    gap: 20px;
+    padding: 0% 5%;
+}
+
+.list1{justify-content: space-around;}
+
+.list3, .games_list{justify-content: space-evenly;}
+
+
+.list2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list3>li, .games_list>li{
+    cursor: pointer;
+    display: flex;
+    padding-top: 2%;
+    flex: 0.15 0 20%;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: darkgray 2px 2px 5px 0px;
+    background-size: cover !important;
+    background-position: center !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition-duration: 0.25s;
+}
+
+.flex1{flex: 1 0 100px !important;}
+
+.list3>li:hover, .games_list>li:hover{
+    box-shadow: var(--main-color) 0px 0px 5px 2px;
+}
+
+.list3>li>div, .games_list>li>div{
+    background: rgba(255, 255, 255, 0.7);
+    padding: 3%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}   
+
+/* .list2>li{
+    background: lightgray;
+    padding: 2%;
+    display: flex;
+    border-bottom: solid darkgrey;
+    border-top: solid darkgray;
+    border-width: 1px;
+}
+
+.par{
+    background: #f3f3f3 !important;
+} */
+
+.firstPost{
+    flex: 0.3 0 20% !important;
+}
+
+.list1>li>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.list2>li>div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.last-posts {
+    margin: 40px;
+    /* padding: 40px 20px; */
+    gap: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (width <= 500px) {
+    .last-posts {
+        margin: 20px;
+    }
+}
+
+.last-blogs {
+    padding: 40px 20px;
+    gap: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sectionSubtitle {
+    font-size: 4vw;
+    color: var(--main-color) ;
+}

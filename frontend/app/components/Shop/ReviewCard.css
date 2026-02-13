@@ -1,0 +1,37 @@
+
+.review{
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px 1px var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--fourth-color);
+}
+
+.review>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review>div>div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review>div>div>img{
+    width: 50px;
+    border: solid yellow;
+    border-radius: 50px;
+}
+
+.starsBox{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}

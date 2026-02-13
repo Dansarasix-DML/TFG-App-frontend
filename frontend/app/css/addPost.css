@@ -1,0 +1,118 @@
+.divBox1{
+    display: flex;
+    justify-content: center;
+}
+
+.addPostFormBox{
+    display: flex;
+    /* justify-content: center; */
+    background-color: var(--fourth-color);
+    padding: 2% 0%;
+    flex: 0.8 1;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-shadow: 0 0 3px 2px var(--main-color);
+    justify-content: center;
+}
+
+.addPostForm{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    gap: 30px;
+    /* flex: 0.5; */
+    align-items: flex-end;
+    width: 80%;
+}
+
+.addPostForm>h2{
+    width: 100%;
+    color: var(--second-color);
+    font-size: 60px;
+}
+
+.addPostForm>div{
+    font-size: small;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.w-md-editor {
+    width: 100%;
+}
+
+.addPostForm>div>label, .title-label{
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+.addPostForm>div>input{
+    height: 30px;
+    width: 600px;
+    border: none;
+    box-shadow: inset 0 0 1px 1px grey;
+    border-radius: 3px;
+    padding: 0% 2%;
+}
+
+.addPostForm>button{
+    cursor: pointer;
+    padding: 1% 3%;
+    border-radius: 20px;
+    background: var(--main-color);
+    color: var(--font-color1);
+    font-weight: bold;
+    border: solid var(--second-color);
+    transition-duration: 0.25s;
+}
+
+.addPostForm>button:hover{
+    color: var(--main-color) !important;
+    background: var(--font-color1);
+    border: solid var(--main-color);
+}
+
+/* Estilos generales para los contenedores */
+div.custom-file-input {
+    position: relative;
+    /* width: 200px; */
+    /* margin: 10px; */
+}
+  
+/* Estilo para simular el botón 'Seleccionar imagen' */
+input[type='file'] {
+    width: 200px;
+    height: 30px;
+    opacity: 0; /* Ocultar el input real */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Colocar sobre el texto */
+    cursor: pointer;
+}
+  
+/* Estilo para el texto y el botón 'Cambiar imagen' */
+label.custom-file-label {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 28rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 4px 1px var(--second-color);
+}
+  
+/* Estilo para el nombre del archivo seleccionado */
+span.file-name {
+    margin-left: 10px;
+}
+  

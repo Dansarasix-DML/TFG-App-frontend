@@ -1,0 +1,40 @@
+.modal {
+    width: 98%;
+
+    margin: 20px auto 40px;
+    padding: 20px 50px;
+
+    border-radius: 20px;
+}
+
+.good-modal {
+    background-color: rgba(123, 216, 83, 0.8);
+}
+
+.warning-modal {
+    background-color: rgba(255, 159, 33, 0.8);
+}
+
+.error-modal {
+    background-color: rgba(255, 61, 61, 0.8);
+}
+
+.modal-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modal-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-content img {
+    width: 60px;
+}
+
+.modal-message {
+    font-size: 22px;
+}

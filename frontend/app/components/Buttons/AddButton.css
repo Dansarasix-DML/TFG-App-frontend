@@ -1,0 +1,51 @@
+.blog-card {
+    position: relative;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blog-card-div {
+    width: 100%;
+    position: absolute;
+    max-height: 50%;
+    height: 50%;
+    bottom: 0px;
+    display: flex;
+    background-color: #c20000;
+    border-radius: 0 0 10px 10px;
+}
+
+.blog-card-data{
+    margin-left: 5%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.blog-card-icon {
+    width: 12vh;
+    border: 4px solid yellow;
+    border-radius: 100%;
+}
+
+.blog-card-div-content {
+    top: -25%;
+    left: 8%;
+
+    color: white;
+}
+
+.blog-card-blogger {
+    font-size: larger;
+    font-weight: 400;
+}

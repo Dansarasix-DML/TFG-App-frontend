@@ -1,0 +1,64 @@
+
+.reviewForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--fourth-color);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 4px 1px var(--main-color);
+}
+
+.up-part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.reviewForm>textarea{
+    padding: 1%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: inset 0 0 4px 1px black;
+}
+
+.ratingBox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 1%;
+    width: 290px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.submitBox{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBox>input, .buttonsBox>button{
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0 0 var(--second-color);
+}
+
+.submitBox>input:hover, .buttonsBox>button:hover{
+    background-color: var(--second-color);
+}

@@ -1,0 +1,13 @@
+.dashboardBlogsCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    row-gap: 40px;
+    padding: 20px 80px;
+}
+
+.dashboardBlogsTitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}

@@ -1,0 +1,146 @@
+.productsIndexSection {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    /* width: 90%; */
+    align-items: center;
+    gap: 30px;
+}
+
+.product-card{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+    align-items: center;
+
+    padding: 30px;
+    border-radius: 10px;
+
+    min-height: 18vh;
+
+    cursor: pointer;
+
+    background-color: var(--fourth-color);
+    color: var(--font-color2);
+    transition-duration: 0.25s;
+}
+
+.product-card:hover{
+    box-shadow: inset 0 0 10px 2px var(--second-color);
+}
+
+.product-card-img{
+    border-radius: 10px;
+    width: 17vw;
+    max-height: 250px;
+    box-shadow: 0 0 4px 1px var(--second-color);
+}
+
+.product-card-div {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 30px;
+}
+
+.product-card-div-up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-title {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.product-card-div-up-blogger {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.product-card-blogger-img {
+    width: 3vw;
+    height: 3vw;
+    border: 4px solid yellow;
+    border-radius: 100%;
+}
+
+.product-card-blogger-name {
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+.product-card-div-down {
+    font-weight: bold;
+    text-align: justify;
+    font-style: italic;
+    font-size: 0.8vw;
+}
+
+.product-prices{
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.sale-price{
+    font-size: 2vw;
+    font-weight: 600;
+    color: green;
+}
+
+.purchase-price{
+    font-size: 1.5vw;
+    font-weight: 300;
+    text-decoration: line-through;
+    color: var(--second-color);
+}
+
+.productWish-data{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.productWish-category{
+    font-size: 1.5vw;
+}
+
+.relative{
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0 0 var(--second-color);
+}
+
+.delete:hover{
+    box-shadow: 0 0 10px 2px var(--second-color);
+}
+
+.productWish-quantity {
+    width: 10%;
+  padding: 10px 15px; /* Adjust padding if needed */
+  border: none;
+  border-radius: 5px;  /* Adjust radius if needed */
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,85 @@
+
+/* src/LastProducts.css */
+.LastProducts-container {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.LastProducts {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Ajuste para asegurar que solo se muestre un grupo */
+    padding: 10px 0; /* Añadir padding superior e inferior para el espacio alrededor del carrusel */
+    list-style: none;
+    margin: 0;
+}
+
+.LastProducts .LastProducts-group {
+    display: flex;
+    flex: 1 0 100%;
+}
+
+.LastProducts .LastProducts-group li {
+    margin: 0 10px; /* Añadir margen entre los divs */
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding-top: 2%;
+    flex: 1 0 30%; /* Ajuste para asegurar que tres elementos encajen perfectamente */
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: darkgray 2px 2px 5px 0px;
+    background-size: cover !important;
+    background-position: center !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition-duration: 0.25s;
+}
+
+.LastProducts .LastProducts-group li:hover {
+    box-shadow: var(--main-color) 0px 0px 5px 2px;
+}
+
+.LastProducts .LastProducts-group li>div {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding: 3%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button.prev, button.next {
+    font-size: xx-large;
+    position: absolute;
+    box-shadow: 0 0 1px 1px #bababa;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255 255 255);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev:hover, button.next:hover {
+    box-shadow: var(--main-color) 0px 0px 5px 2px;
+}
+
+button.prev {
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+button.next {
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+}
+
+.LastProducts .LastProducts-group li.filler {
+    visibility: hidden;
+    flex: 1 0 100%; /* Relleno para que ocupe espacio */
+}

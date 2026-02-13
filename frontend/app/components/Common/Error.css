@@ -1,0 +1,21 @@
+.error {
+    background-color: rgba(250, 72, 72, 0.66);
+    width: 80%;
+    padding: 60px;
+    margin: 40px auto;
+    border-radius: 20px;
+}
+
+.error>h2{
+    font-size: 80px;
+}
+
+.error>h4{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.error>p{
+    font-size: 30px;
+}
