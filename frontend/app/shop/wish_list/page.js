@@ -29,7 +29,7 @@ function ProductList() {
                 products.map(product => (
                     <ProductCard 
                         key={product.id}
-                        type='wishList'
+                        type='WishList'
                         profile={product.imgs ? 'https://api.gameverseproject.tech/img/blogs/' + product.imgs.split(", ")[0] : 
                         'https://api.gameverseproject.tech/img/blogs/blog_default_banner.jpg'}
                         name={product.name}
@@ -44,7 +44,7 @@ function ProductList() {
     );
 }
 
-export default function wishList() {
+export default function WishList() {
 
     const [cookies, setCookies] = useState({});
 

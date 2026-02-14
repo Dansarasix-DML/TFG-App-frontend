@@ -27,6 +27,7 @@ export default function Pedidos() {
             <div className="listadoOrders">
                 {orders.map(order => (
                     <OrderCard 
+                        key={order.order.id}
                         id={order.order.id}
                         datetime={order.order.datetime}
                         price={order.order.price}
