@@ -40,7 +40,7 @@ function Panel() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/event/allEventsAJAX');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/event/allEventsAJAX');
                 setData(response.data.events);
                 // setCount(response.data.products.length);
             } catch (error) {
@@ -56,7 +56,7 @@ function Panel() {
 
         if (searchTerm.trim() !== '') {
           try {
-              const response = await Axios.post(process.env.DB_HOST + `/api/event/searchAJAX`, { search: searchTerm });
+              const response = await Axios.post(process.env.NEXT_PUBLIC_DB_HOST + `/api/event/searchAJAX`, { search: searchTerm });
               setSearchResults(response.data.search);
               // setCount(response.data.search.length);
           } catch (error) {

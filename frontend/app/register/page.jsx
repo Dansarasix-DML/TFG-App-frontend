@@ -52,7 +52,7 @@ export default function Page() {
   <>
       <AuthCard title="Registro" type="register" captchaStatus={captchaSuccess}>
           <HCaptcha
-          sitekey={process.env.HCAPTCHA_SITE_KEY}
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY}
           onToken={handleCaptchaToken}
           />    
       </AuthCard>

@@ -11,7 +11,7 @@ function Posts({blogslug}) {
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const uri = process.env.DB_HOST + "/api/blog/" + blogslug + "/lastPostsAJAX";
+                const uri = process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blogslug + "/lastPostsAJAX";
                 // console.log(uri);
                 const response = await Axios.get(uri);
                 setPosts(response.data);
@@ -47,7 +47,7 @@ function Comments({ postslug, blogslug }) {
     useEffect(() => {
       async function fetchSearchPost() {
         try {
-          const uri = `${process.env.DB_HOST}/api/blog/${blogslug}/${postslug}`;
+          const uri = `${process.env.NEXT_PUBLIC_DB_HOST}/api/blog/${blogslug}/${postslug}`;
           const response = await Axios.get(uri);
           setComments(response.data.comments);
         } catch (error) {
@@ -79,7 +79,7 @@ function Comments({ postslug, blogslug }) {
     useEffect(() => {
       async function fetchSearchPost() {
         try {
-          const uri = `${process.env.DB_HOST}/api/blog/${blogslug}/${postslug}`;
+          const uri = `${process.env.NEXT_PUBLIC_DB_HOST}/api/blog/${blogslug}/${postslug}`;
           const response = await Axios.get(uri);
           setPost(response.data.post);
           setBlogger(response.data.blogger);

@@ -25,7 +25,7 @@ function Posts({blogslug}) {
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const uri = process.env.DB_HOST + "/api/blog/" + blogslug + "/lastPostsAJAX";
+                const uri = process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blogslug + "/lastPostsAJAX";
                 const response = await Axios.get(uri);
                 setPosts(response.data);
             } catch (error) {
@@ -158,7 +158,7 @@ function BlogHeader({blogslug}) {
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const uri = process.env.DB_HOST + "/api/blog/" + blogslug + "/getInfo";
+                const uri = process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blogslug + "/getInfo";
                 // console.log(uri);
                 const response = await Axios.get(uri);
                 setBlog(response.data.blog);
@@ -173,7 +173,7 @@ function BlogHeader({blogslug}) {
     useEffect(() => {
         async function fetchSubscribers() {
             try {
-                const uri = process.env.DB_HOST + "/api/blog/" + blog.id + "/getSubscribers";
+                const uri = process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blog.id + "/getSubscribers";
                 // console.log(uri);
                 const response = await Axios.get(uri);
                 setSubscribers(response.data.subscribers);
@@ -223,14 +223,14 @@ export default function BlogIndex({blogslug}){
                 <hr />
             </div>
             <p>Titles released.</p>
-            <Products type="games" url={process.env.DB_HOST + "/api/blog/" + blogslug + "/gamesAJAX"}/>
+            <Products type="games" url={process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blogslug + "/gamesAJAX"}/>
             <div className='divFlex1 gap1'>
                 <hr />
                 <h2 className='sectionSubtitle'>Merchandising</h2>
                 <hr />
             </div>
             <p>Merchandising from this Blog.</p>
-            <Products type="merch" url={process.env.DB_HOST + "/api/blog/" + blogslug + "/merchAJAX"}/>
+            <Products type="merch" url={process.env.NEXT_PUBLIC_DB_HOST + "/api/blog/" + blogslug + "/merchAJAX"}/>
             <div className='divFlex1'>
                 <hr />
                 <h2 className='sectionSubtitle'>Events</h2>

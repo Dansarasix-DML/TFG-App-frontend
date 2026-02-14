@@ -42,7 +42,7 @@ function Panel() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/shop/allProductsAJAX');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/shop/allProductsAJAX');
                 setData(response.data.products);
                 // setCount(response.data.products.length);
             } catch (error) {
@@ -58,7 +58,7 @@ function Panel() {
 
         if (searchTerm.trim() !== '') {
           try {
-              const response = await Axios.post(process.env.DB_HOST + `/api/shop/searchAJAX`, { search: searchTerm });
+              const response = await Axios.post(process.env.NEXT_PUBLIC_DB_HOST + `/api/shop/searchAJAX`, { search: searchTerm });
               setSearchResults(response.data.search);
               // setCount(response.data.search.length);
               } catch (error) {

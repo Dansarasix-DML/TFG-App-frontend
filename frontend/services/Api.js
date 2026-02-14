@@ -1,5 +1,5 @@
 export class Api {
-    static baseUrl = process.env.DB_HOST + "/api";
+    static baseUrl = process.env.NEXT_PUBLIC_DB_HOST + "/api";
 
     static async post(url, data, jwt) {
         const res = await fetch(`${Api.baseUrl}${url}`, {

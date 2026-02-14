@@ -8,7 +8,7 @@ const GoogleAuth = () => {
         const token = response.credential;
 
         try {
-            const res = await axios.post(process.env.DB_HOST + '/api/auth/google/callback', { token });
+            const res = await axios.post(process.env.NEXT_PUBLIC_DB_HOST + '/api/auth/google/callback', { token });
             const { token: jwtToken, email, profile_img, username } = res.data;
             setUserCookies(email, jwtToken);
 

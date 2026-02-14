@@ -12,7 +12,7 @@ function Blogs({username}) {
     useEffect(() => {
         async function fetchBlogs() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/user/' + username);
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/user/' + username);
                 setBlogs(response.data.blogs);
             } catch (error) {
                 console.error(error);
@@ -82,7 +82,7 @@ function User({username}) {
     useEffect(() => {
         async function fetchBlogs() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/user/' + username);
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/user/' + username);
                 setUser(response.data.user);
             } catch (error) {
                 console.error(error);
@@ -122,13 +122,13 @@ export default function UserIndex({username}) {
                 <h2 className='sectionSubtitle'>Games</h2>
                 <hr />
             </div>
-            <Products type="games" url={process.env.DB_HOST + "/api/user/" + username + "/products"}/>
+            <Products type="games" url={process.env.NEXT_PUBLIC_DB_HOST + "/api/user/" + username + "/products"}/>
             <div className='divFlex1'>
                 <hr />
                 <h2 className='sectionSubtitle'>Merchandising</h2>
                 <hr />
             </div>
-            <Products type="merchandising" url={process.env.DB_HOST + "/api/user/" + username + "/products"}/>
+            <Products type="merchandising" url={process.env.NEXT_PUBLIC_DB_HOST + "/api/user/" + username + "/products"}/>
             <div className='divFlex1'>
                 <hr />
                 <h2 className='sectionSubtitle'>Events</h2>

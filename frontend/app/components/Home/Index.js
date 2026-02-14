@@ -10,7 +10,7 @@ function Posts() {
     useEffect(() => {
         async function fetchBlogs() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/blog/lastPostsIndexAJAX');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/blog/lastPostsIndexAJAX');
                 setPosts(response.data);
             } catch (error) {
                 console.error(error);
@@ -44,7 +44,7 @@ function Blogs() {
     useEffect(() => {
         async function fetchBlogs() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/blog/lastBlogsAJAX');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/blog/lastBlogsAJAX');
                 setBlogs(response.data);
                 console.log(blogs);
             } catch (error) {

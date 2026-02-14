@@ -13,7 +13,7 @@ export default function ProductData({productSlug}) {
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/shop/productDataAJAX/'+productSlug);
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/shop/productDataAJAX/'+productSlug);
                 setProduct(response.data.product);
                 setRating(response.data.rating);
             } catch (error) {

@@ -10,7 +10,7 @@ function LastProducts(){
     useEffect(() => {
         async function fetchProducts() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/shop/lastProductsAJAX/1');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/shop/lastProductsAJAX/1');
                 setProducts(response.data.products);
             } catch (error) {
                 console.error(error);

@@ -67,7 +67,7 @@ function ProductList() {
                     <hr className='hr2'/>
                     <div className='total'>
                         <h4>Total: {total} €</h4>
-                        <form action={process.env.DB_HOST_API+"/pay/checkout"} method="POST" onSubmit={handleSubmit}>
+                        <form action={process.env.NEXT_PUBLIC_DB_HOST_API+"/pay/checkout"} method="POST" onSubmit={handleSubmit}>
                             <button type='submit' className='order'>Process Order</button>
                         </form>
                     </div>

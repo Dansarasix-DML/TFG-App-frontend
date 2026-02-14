@@ -13,7 +13,7 @@ export default function Carousel({productSlug}) {
     useEffect(() => {
         async function fetchImages() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/shop/productImagesAJAX/'+productSlug);
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/shop/productImagesAJAX/'+productSlug);
                 setImages(response.data.images.split(', '));
             } catch (error) {
                 console.error(error);

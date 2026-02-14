@@ -14,7 +14,7 @@ const ProductDisplay = () => (
       <h5>$20.00</h5>
       </div>
     </div>
-    <form action={process.env.DB_HOST_API+"/pay/checkout"} method="POST">
+    <form action={process.env.NEXT_PUBLIC_DB_HOST_API+"/pay/checkout"} method="POST">
       <button type="submit">
         Checkout
       </button>

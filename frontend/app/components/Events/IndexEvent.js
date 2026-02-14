@@ -11,7 +11,7 @@ function Events() {
     useEffect(() => {
         async function fetchEvents() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/event/lastEventsAJAX');
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/event/lastEventsAJAX');
                 setEvents(response.data.events);
                 console.log(response.data.events);
             } catch (error) {

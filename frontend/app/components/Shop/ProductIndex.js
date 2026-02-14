@@ -37,7 +37,7 @@ export default function ProductIndex({productSlug}) {
 
     const fetchReviews = async () => {
         try {
-            const response = await Axios.get(process.env.DB_HOST + `/api/shop/${productSlug}/reviews`);
+            const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + `/api/shop/${productSlug}/reviews`);
             setReviews(response.data.reviews);
         } catch (error) {
             console.error(error);
@@ -47,7 +47,7 @@ export default function ProductIndex({productSlug}) {
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const response = await Axios.get(process.env.DB_HOST + '/api/shop/productDataAJAX/'+productSlug);
+                const response = await Axios.get(process.env.NEXT_PUBLIC_DB_HOST + '/api/shop/productDataAJAX/'+productSlug);
                 setDesc(response.data.product.description);
             } catch (error) {
                 console.error(error);
