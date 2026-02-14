@@ -7,7 +7,7 @@ import MDEditor from '@uiw/react-md-editor';
 import "@/app/css/addEvent.css"
 import Swal from 'sweetalert2';
 
-export default function addEvent() {
+export default function AddEvent() {
     const [blogs, setBlogs] = useState([])
     const [value, setValue] = useState("**Hello world!!!**");
     const [bannerImgName, setBannerImgName] = useState("Banner del evento");
