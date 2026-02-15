@@ -28,14 +28,14 @@ export default function ProductCard({ name, description, slug, imgs, purchase_pr
 
     return (
         <article className="product-card" onClick={clickFn}>
-            <img src={"https://api.gameverseproject.tech/img/blogs/"+imgs[0]} className="product-card-img"/>
+            <img src={"https://gameverse-app.vercel.app/img/blogs/"+imgs[0]} className="product-card-img"/>
             <div className="product-card-div">
                 <div className='product-card-div-up'>
                     <div className="product-card-div-up-content">
                         <p className="product-card-title">{name}</p>
                     </div>
                     <div className="product-card-div-up-blogger">
-                        <img src={"https://api.gameverseproject.tech/img/"+blogImg} className="product-card-blogger-img"/>
+                        <img src={"https://gameverse-app.vercel.app/img/"+blogImg} className="product-card-blogger-img"/>
                         <p className="product-card-blogger-name">{blogName}</p>
                     </div>
                 </div>

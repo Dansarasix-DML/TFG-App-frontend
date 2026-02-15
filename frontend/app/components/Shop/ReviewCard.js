@@ -7,7 +7,7 @@ export default function ReviewCard({ id, name, username, rating, content, avatar
         <article className='review'>
             <div>
                 <div>
-                    <img src={avatar ? 'https://api.gameverseproject.tech/img/users/' + avatar : 'https://api.gameverseproject.tech/img/users/avatar.png'} alt='avatar' />
+                    <img src={avatar ? 'https://gameverse-app.vercel.app/img/users/' + avatar : 'https://gameverse-app.vercel.app/img/users/avatar.png'} alt='avatar' />
                     <p>{name} <strong>(@{username})</strong></p>
                 </div>
                 <div className='starsBox'>

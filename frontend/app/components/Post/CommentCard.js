@@ -15,7 +15,7 @@ export default function CommentCard({user_name, user_username, content, user_ava
         return(
             <article className='commentBox'>
                 <div>
-                    <img src={user_avatar ? 'https://api.gameverseproject.tech/img/users/' + user_avatar : 'https://api.gameverseproject.tech/img/avatar01.png'} alt='' />
+                    <img src={user_avatar ? 'https://gameverse-app.vercel.app/img/users/' + user_avatar : 'https://gameverse-app.vercel.app/img/avatar01.png'} alt='' />
                     <p>{user_name} <strong>(@{user_username})</strong></p>
                 </div>
                 <p>{content}</p>
@@ -32,7 +32,7 @@ export default function CommentCard({user_name, user_username, content, user_ava
     return(
         <article className='commentBox'>
             <div>
-                <img src={user_avatar ? 'https://api.gameverseproject.tech/img/users/' + user_avatar : 'https://api.gameverseproject.tech/img/avatar01.png'} alt='' />
+                <img src={user_avatar ? 'https://gameverse-app.vercel.app/img/users/' + user_avatar : 'https://gameverse-app.vercel.app/img/avatar01.png'} alt='' />
                 <p>{user_name} <strong>(@{user_username})</strong></p>
             </div>
             <p>{content}</p>

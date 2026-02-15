@@ -128,7 +128,7 @@ function Panel() {
                 <BlogFile 
                   key={item.id || index} 
                   index={index} 
-                  url={item.banner_img ? `url(${"https://api.gameverseproject.tech/img/blogs/" + item.banner_img})` : "url(https://api.gameverseproject.tech/img/blogs/blog_default_banner.png)"} 
+                  url={item.banner_img ? `url(${"https://gameverse-app.vercel.app/img/blogs/" + item.banner_img})` : "url(https://gameverse-app.vercel.app/img/blogs/blog_default_banner.png)"} 
                   title={item.title} 
                   totalPosts={item.total_posts}
                   totalProducts={item.total_products}

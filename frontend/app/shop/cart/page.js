@@ -55,8 +55,8 @@ function ProductList() {
                         <ProductCard 
                             key={productsQuantity[productId][0].id+Math.floor(Math.random() * 250)}
                             type='cart'
-                            profile={productsQuantity[productId][0].imgs ? 'https://api.gameverseproject.tech/img/blogs/' + productsQuantity[productId][0].imgs.split(", ")[0] : 
-                            'https://api.gameverseproject.tech/img/blogs/blog_default_banner.jpg'}
+                            profile={productsQuantity[productId][0].imgs ? 'https://gameverse-app.vercel.app/img/blogs/' + productsQuantity[productId][0].imgs.split(", ")[0] : 
+                            'https://gameverse-app.vercel.app/img/blogs/blog_default_banner.jpg'}
                             name={productsQuantity[productId][0].name}
                             slug = {productsQuantity[productId][0].slug}
                             categories={productsQuantity[productId][0].categories}

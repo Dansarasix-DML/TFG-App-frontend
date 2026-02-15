@@ -65,7 +65,7 @@ export default function Carousel({productSlug}) {
         <div className='carousel'>
             <div className='slides-container'>
                 {images.map((image, index) => (
-                    <img key={index} src={"https://api.gameverseproject.tech/img/blogs/"+image} alt={'photo_'+index} className={slide === index ? 'slide slide-enter' : ' slide slide-exit slide-hidden'} />
+                    <img key={index} src={"https://gameverse-app.vercel.app/img/blogs/"+image} alt={'photo_'+index} className={slide === index ? 'slide slide-enter' : ' slide slide-exit slide-hidden'} />
                 ))}
             </div>
             <p className='arrow arrow-left' onClick={prevSlide}><i className="bi bi-arrow-left-circle-fill"></i></p>

@@ -44,7 +44,7 @@ export default function EventCard({banner, name, slug, editable}) {
         })
     }
 
-    const back = "url(https://api.gameverseproject.tech/img/events/"+banner+")";
+    const back = "url(https://gameverse-app.vercel.app/img/events/"+banner+")";
 
     return (
         <>

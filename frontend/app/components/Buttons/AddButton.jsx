@@ -32,9 +32,9 @@ export default function AddButton({ type }) {
     }
 
     return (
-        <article className="blog-card" style={{backgroundImage: "url(https://api.gameverseproject.tech/img/banner01.jpg)"}} onClick={clickFn}>
+        <article className="blog-card" style={{backgroundImage: "url(https://gameverse-app.vercel.app/img/banner01.jpg)"}} onClick={clickFn}>
             <div className='blog-card-data'>
-                <img src="https://api.gameverseproject.tech/img/addIcon.png" className="blog-card-icon"/>
+                <img src="https://gameverse-app.vercel.app/img/addIcon.png" className="blog-card-icon"/>
                 <div className="blog-card-div-content">
                     <p className="blog-card-name">Add {type}</p>
                 </div>

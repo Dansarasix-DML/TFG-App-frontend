@@ -128,7 +128,7 @@ function Panel() {
                 <ProductFile 
                   key={item.id || index} 
                   index={index} 
-                  url={`url(${"https://api.gameverseproject.tech/img/blogs/" + item.imgs.split(',')[0]})`} 
+                  url={`url(${"https://gameverse-app.vercel.app/img/blogs/" + item.imgs.split(',')[0]})`} 
                   name={item.name} 
                   sale_price={item.sale_price} 
                   typeName={item.typeName} 

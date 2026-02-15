@@ -9,7 +9,7 @@ export default function BlogCard({title, slug, banner, profile}) {
     return (
         <li style={{backgroundImage: "url(" + banner + ")"}} onClick={clickFn}>
             <div className='blogData'>
-                <img src={profile ? profile : "https://api.gameverseproject.tech/img/users/avatar.png"} alt="profile" />
+                <img src={profile ? profile : "https://gameverse-app.vercel.app/img/users/avatar.png"} alt="profile" />
                 <p>{title}</p>
             </div>
             <div className='back'></div>

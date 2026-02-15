@@ -44,7 +44,7 @@ export default function ProductCard({banner, name, slug, editable}) {
         })
     }
 
-    const back = banner ? "url(https://api.gameverseproject.tech/img/blogs/"+banner+")" : "url(https://api.gameverseproject.tech/img/banner01.jpg)";
+    const back = banner ? "url(https://gameverse-app.vercel.app/img/blogs/"+banner+")" : "url(https://gameverse-app.vercel.app/img/banner01.jpg)";
 
     return (
         <>

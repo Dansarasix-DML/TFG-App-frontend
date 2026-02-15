@@ -28,8 +28,8 @@ function Blogs({username}) {
                 {Object.values(blogs).map(blog => (
                     <BlogCard 
                         key={blog.id}
-                        banner={blog.banner_img ? "https://api.gameverseproject.tech/img/blogs/" + blog.banner_img : "https://api.gameverseproject.tech/img/banner01.jpg"}
-                        profile={blog.profile_img ? "https://api.gameverseproject.tech/img/blogs/" + blog.profile_img : null}
+                        banner={blog.banner_img ? "https://gameverse-app.vercel.app/img/blogs/" + blog.banner_img : "https://gameverse-app.vercel.app/img/banner01.jpg"}
+                        profile={blog.profile_img ? "https://gameverse-app.vercel.app/img/blogs/" + blog.profile_img : null}
                         title={blog.title}
                         slug={blog.slug}
                     />
@@ -64,7 +64,7 @@ function Products({type, url}) {
                 {products.map((product, index) => (
                     <ProductCard 
                         key={product.id}
-                        urlImage={`url(${"https://api.gameverseproject.tech/img/blogs/" + product.imgs.split(',')[0]}) white`} 
+                        urlImage={`url(${"https://gameverse-app.vercel.app/img/blogs/" + product.imgs.split(',')[0]}) white`} 
                         urlProduct={"/shop/" + product.slug} 
                         productName={product.name}
                     />
@@ -93,8 +93,8 @@ function User({username}) {
     }, [username]);
 
     return (
-        <div className={user.banner ? 'userbox' : 'userbox defaultBanner'} style={user.banner ? {backgroundImage: "url(https://api.gameverseproject.tech/img/users/"+user.banner+")"} : {}}>
-            {(user.avatar !== "" && user.avatar !== " " && user.avatar) ? <img src={"https://api.gameverseproject.tech/img/users/"+user.avatar} alt={user.name} /> : <img src='https://api.gameverseproject.tech/img/users/avatar.png' alt='default' />}
+        <div className={user.banner ? 'userbox' : 'userbox defaultBanner'} style={user.banner ? {backgroundImage: "url(https://gameverse-app.vercel.app/img/users/"+user.banner+")"} : {}}>
+            {(user.avatar !== "" && user.avatar !== " " && user.avatar) ? <img src={"https://gameverse-app.vercel.app/img/users/"+user.avatar} alt={user.name} /> : <img src='https://gameverse-app.vercel.app/img/users/avatar.png' alt='default' />}
             <div className='userData'>
                 <h2>{user.name}</h2>
                 <p>@{user.username}</p>

@@ -65,13 +65,13 @@ export default function BlogCard({ blog_banner, blog_icon, blog_name, blogger_na
         })
     }
 
-    const back = (blog_banner && blog_banner != "" && blog_banner != " ") ? "url(https://api.gameverseproject.tech/img/blogs/"+blog_banner+")" : "url(https://api.gameverseproject.tech/img/blogs/blog_default_banner.png)";
+    const back = (blog_banner && blog_banner != "" && blog_banner != " ") ? "url(https://gameverse-app.vercel.app/img/blogs/"+blog_banner+")" : "url(https://gameverse-app.vercel.app/img/blogs/blog_default_banner.png)";
 
     return (
         <>
         <article className="blog-card" style={{backgroundImage: back}} onClick={clickFn}>
             <div className='blog-card-data'>
-                <img src={(blog_icon && blog_icon != "" && blog_icon != " ") ? "https://api.gameverseproject.tech/img/blogs/"+blog_icon : "https://api.gameverseproject.tech/img/blogs/post_default_icon.png"} className="blog-card-icon"/>
+                <img src={(blog_icon && blog_icon != "" && blog_icon != " ") ? "https://gameverse-app.vercel.app/img/blogs/"+blog_icon : "https://gameverse-app.vercel.app/img/blogs/post_default_icon.png"} className="blog-card-icon"/>
                 <div className="blog-card-div-content">
                     <p className="blog-card-name">{blog_name}</p>
                     <p className="blog-card-blogger"><a href={'/user/'+blogger_username}>{blogger_name}</a></p>

@@ -30,7 +30,7 @@ function Posts({blogslug}) {
                     <PostCard 
                     index={index}
                     key={post.id}
-                    urlImage={post.banner_img ? "url(" + "https://api.gameverseproject.tech/img/blogs/" + post.banner_img + ") white" : "url(" + "https://api.gameverseproject.tech/img/banner01.jpg) white"}
+                    urlImage={post.banner_img ? "url(" + "https://gameverse-app.vercel.app/img/blogs/" + post.banner_img + ") white" : "url(" + "https://gameverse-app.vercel.app/img/banner01.jpg) white"}
                     urlPost={"/blog/" + blogslug + "/" + post.slug}
                     postTitle={post.title}
                     />

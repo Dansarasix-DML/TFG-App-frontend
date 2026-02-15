@@ -43,7 +43,7 @@ function Posts({blogslug}) {
                     <PostCard 
                         index={index}
                         key={post.id}
-                        urlImage={post.banner_img ? "url(https://api.gameverseproject.tech" + "/img/blogs/" + post.banner_img + ") white" : "url(" + "/img/banner01.jpg) white"}
+                        urlImage={post.banner_img ? "url(https://gameverse-app.vercel.app" + "/img/blogs/" + post.banner_img + ") white" : "url(" + "/img/banner01.jpg) white"}
                         urlPost={"/blog/" + blogslug + "/" + post.slug}
                         postTitle={post.title}
                         postSubtitle={post.subtitle}
@@ -79,7 +79,7 @@ function Products({type, url}) {
                 {products.map((product, index) => (
                     <ProductCard 
                         key={product.id}
-                        urlImage={`url(https://api.gameverseproject.tech${"/img/blogs/" + product.imgs.split(',')[0]}) white`} 
+                        urlImage={`url(https://gameverse-app.vercel.app${"/img/blogs/" + product.imgs.split(',')[0]}) white`} 
                         urlProduct={"/shop/" + product.slug} 
                         productName={product.name}
                     />
@@ -187,11 +187,11 @@ function BlogHeader({blogslug}) {
         }
     }, [blog.id]);
 
-    const back = "url(https://api.gameverseproject.tech/img/blogs/"+blog.banner_img+")";
+    const back = "url(https://gameverse-app.vercel.app/img/blogs/"+blog.banner_img+")";
 
     return (
         <div className='blogHeaderBack' style={{backgroundImage: back}}>
-            <img src={'https://api.gameverseproject.tech/img/blogs/'+blog.profile_img}></img>
+            <img src={'https://gameverse-app.vercel.app/img/blogs/'+blog.profile_img}></img>
             <div className='blogData'>
                 <div>
                     <h1>{blog.title}</h1>

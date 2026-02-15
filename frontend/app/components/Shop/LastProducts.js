@@ -44,7 +44,7 @@ const LastProducts = () => {
                 <ProductCard
                     key={product.id}
                     clase={true}
-                    urlImage={`url(${"https://api.gameverseproject.tech/img/blogs/" + product.imgs.split(',')[0]}) white`}
+                    urlImage={`url(${"https://gameverse-app.vercel.app/img/blogs/" + product.imgs.split(',')[0]}) white`}
                     urlProduct={"/shop/" + product.slug}
                     productName={product.name}
                 />

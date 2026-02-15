@@ -9,7 +9,7 @@ function ProductCard({ name, description, price, quantity, imgs }) {
     return (
       <div className="productCard">
         {/* <Carousel productSlug={productSlug} /> */}
-        <img src={"https://api.gameverseproject.tech/img/blogs/" + imgs.split(', ')[0]} alt="" />
+        <img src={"https://gameverse-app.vercel.app/img/blogs/" + imgs.split(', ')[0]} alt="" />
         <div>
             <h3>{name}</h3>
             <p>{description}</p>

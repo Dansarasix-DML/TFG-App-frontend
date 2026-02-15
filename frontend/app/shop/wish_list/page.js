@@ -30,8 +30,8 @@ function ProductList() {
                     <ProductCard 
                         key={product.id}
                         type='WishList'
-                        profile={product.imgs ? 'https://api.gameverseproject.tech/img/blogs/' + product.imgs.split(", ")[0] : 
-                        'https://api.gameverseproject.tech/img/blogs/blog_default_banner.jpg'}
+                        profile={product.imgs ? 'https://gameverse-app.vercel.app/img/blogs/' + product.imgs.split(", ")[0] : 
+                        'https://gameverse-app.vercel.app/img/blogs/blog_default_banner.jpg'}
                         name={product.name}
                         slug = {product.slug}
                         categories={product.categories}

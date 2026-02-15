@@ -1,7 +1,7 @@
 import '../Common/BlogCard.css';
 
 export default function EventCard ({ banner, title, blogTitle, blogSlug, slug }){
-    const back = "url(https://api.gameverseproject.tech/img/events/"+banner+")";
+    const back = "url(https://gameverse-app.vercel.app/img/events/"+banner+")";
 
     const clickFn = () => {
         window.location.href = "/event/"+slug;

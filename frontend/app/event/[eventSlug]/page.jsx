@@ -23,7 +23,7 @@ export default function Event({ params }) {
     
     return(
         <main>
-            <div className="event-main-header" style={{backgroundImage: "url(https://api.gameverseproject.tech/img/events/" + event.banner_img + ")"}}>
+            <div className="event-main-header" style={{backgroundImage: "url(https://gameverse-app.vercel.app/img/events/" + event.banner_img + ")"}}>
                 <h2 className="event-title">{event.title}</h2>
                 <h3 className="event-subtitle">{event.subtitle}</h3>
             </div>

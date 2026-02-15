@@ -126,7 +126,7 @@ function Panel() {
                 <EventFile 
                   key={item.id || index} 
                   index={index} 
-                  url={`url(${"https://api.gameverseproject.tech/img/events/" + item.banner_img})`} 
+                  url={`url(${"https://gameverse-app.vercel.app/img/events/" + item.banner_img})`} 
                   name={item.title} 
                   start_date={item.start_dtime} 
                   end_date={item.end_dtime} 
