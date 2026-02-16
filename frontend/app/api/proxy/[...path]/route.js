@@ -32,10 +32,10 @@ async function handler(req, { params }) {
   return new Response(data, {
     status: response.status,
     headers: {
-      "Content-Type":
-        response.headers.get("content-type") || "application/json",
+      "Content-Type": response.headers.get("content-type") || "application/octet-stream",
     },
   });
+
 }
 
 export { handler as GET };

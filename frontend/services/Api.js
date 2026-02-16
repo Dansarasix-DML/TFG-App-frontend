@@ -12,7 +12,14 @@ export class Api {
             body: data instanceof FormData ? data : JSON.stringify(data),
         });
 
-        const dataRes = await res.json();
+        const contentType = res.headers.get("content-type");
+
+        let dataRes;
+        if (contentType?.includes("application/json")) {
+            dataRes = await res.json();
+        } else {
+            dataRes = await res.text(); // para errores HTML
+        }
 
         return {
             statusCode: res.status,
