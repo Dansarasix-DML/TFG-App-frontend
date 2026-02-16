@@ -1,17 +1,31 @@
-export async function handler(req, { params }) {
-  const response = await fetch(
-    `https://gameverse-api-mx1g.onrender.com/api/${params.path.join("/")}`,
-    {
-      method: req.method,
-      headers: {
-        "Authorization": req.headers.get("authorization") || "",
-        "Content-Type": req.headers.get("content-type") || "",
-      },
-      body: req.method !== "GET" && req.method !== "DELETE"
-        ? req.body
-        : undefined,
+const BACKEND_URL = "https://gameverse-api-mx1g.onrender.com/api";
+
+async function handler(req, { params }) {
+  const url = `${BACKEND_URL}/${params.path.join("/")}`;
+
+  const headers = new Headers();
+  
+  const auth = req.headers.get("authorization");
+  if (auth) headers.set("Authorization", auth);
+
+  const contentType = req.headers.get("content-type");
+  if (contentType) headers.set("Content-Type", contentType);
+
+  let body;
+
+  if (req.method !== "GET" && req.method !== "DELETE") {
+    if (contentType?.includes("application/json")) {
+      body = JSON.stringify(await req.json());
+    } else {
+      body = await req.arrayBuffer(); // 🔥 clave para FormData
     }
-  );
+  }
+
+  const response = await fetch(url, {
+    method: req.method,
+    headers,
+    body,
+  });
 
   return new Response(response.body, {
     status: response.status,
