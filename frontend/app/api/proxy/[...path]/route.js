@@ -4,7 +4,7 @@ async function handler(req, { params }) {
   const url = `${BACKEND_URL}/${params.path.join("/")}`;
 
   const headers = new Headers();
-  
+
   const auth = req.headers.get("authorization");
   if (auth) headers.set("Authorization", auth);
 
@@ -17,7 +17,7 @@ async function handler(req, { params }) {
     if (contentType?.includes("application/json")) {
       body = JSON.stringify(await req.json());
     } else {
-      body = await req.arrayBuffer(); // 🔥 clave para FormData
+      body = await req.arrayBuffer();
     }
   }
 
@@ -27,9 +27,14 @@ async function handler(req, { params }) {
     body,
   });
 
-  return new Response(response.body, {
+  const data = await response.arrayBuffer();
+
+  return new Response(data, {
     status: response.status,
-    headers: response.headers,
+    headers: {
+      "Content-Type":
+        response.headers.get("content-type") || "application/json",
+    },
   });
 }
 
