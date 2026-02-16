@@ -1,21 +1,26 @@
-
-export async function POST(req, { params }) {
-  const body = await req.text();
-
+export async function handler(req, { params }) {
   const response = await fetch(
     `https://gameverse-api-mx1g.onrender.com/api/${params.path.join("/")}`,
     {
-      method: "POST",
+      method: req.method,
       headers: {
-        "Content-Type": req.headers.get("content-type") || "application/json",
         "Authorization": req.headers.get("authorization") || "",
+        "Content-Type": req.headers.get("content-type") || "",
       },
-      body
+      body: req.method !== "GET" && req.method !== "DELETE"
+        ? req.body
+        : undefined,
     }
   );
 
-  return new Response(await response.text(), {
+  return new Response(response.body, {
     status: response.status,
-    headers: { "Content-Type": "application/json" }
+    headers: response.headers,
   });
 }
+
+export { handler as GET };
+export { handler as POST };
+export { handler as PUT };
+export { handler as PATCH };
+export { handler as DELETE };
